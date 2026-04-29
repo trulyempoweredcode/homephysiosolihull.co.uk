@@ -1,0 +1,100 @@
+/* =============================================
+   THEME: Home Physio Solihull — Rich Forest
+   Calm, premium, trustworthy — physiotherapy
+   Font Pairing: Corporate (DM Serif Display + Inter)
+   ============================================= */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=Inter:wght@400;500;600&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  /* Colour Palette — Rich Forest (deep green) */
+  --color-primary: #2D4A3E;
+  --color-primary-light: #3D6655;
+  --color-primary-dark: #1A3028;
+  --color-secondary: #B8860B;
+  --color-secondary-light: #D4A832;
+  --color-secondary-dark: #8B6508;
+  --color-accent: #6B8E7B;
+  --color-accent-light: #8FB3A0;
+
+  --color-bg: #FAFAF7;
+  --color-bg-alt: #F0EFE8;
+  --color-bg-dark: #1A3028;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F6F0;
+
+  --color-text: #2C2C2C;
+  --color-text-light: #5C5C5C;
+  --color-text-inverse: #FAFAF7;
+  --color-text-heading: #1A1A1A;
+
+  --color-border: #DDD8CC;
+  --color-border-light: #EBE8E0;
+
+  --color-success: #2D6A4F;
+  --color-error: #B33A3A;
+
+  /* Typography */
+  --font-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Ensure info-band icons are perfectly round */
+.info-band__icon {
+  min-width: 48px;
+  min-height: 48px;
+  overflow: hidden;
+}
+
+/* Lighter frost card on showcase hero */
+.hero--showcase-dark .hero__content {
+  background: rgba(0, 0, 0, 0.28);
+}
+
+/* Hero text shadow for legibility on overlay */
+.hero__heading,
+.hero__text {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* Hero image clamp — never let it overflow viewport */
+.hero--half .hero__image {
+  max-height: 85vh;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero--half .hero__image {
+    max-height: 60vh;
+  }
+}
+
+/* Contact page heading overrides */
+.contact-info h2,
+.contact-form-wrap .card h2 {
+  font-size: var(--text-xl);
+}
+
+/* Testimonial star centering */
+.text-center .testimonial__stars,
+.testimonial--standalone .testimonial__stars {
+  justify-content: center;
+}
+
+/* Portrait image — taller on desktop */
+@media (min-width: 768px) {
+  .intro__image-wrap {
+    min-height: 550px;
+  }
+}
+
+/* Nav brand sizing */
+.nav__name {
+  font-size: var(--text-2xl);
+}
+
+.nav__title {
+  font-size: var(--text-sm);
+}
