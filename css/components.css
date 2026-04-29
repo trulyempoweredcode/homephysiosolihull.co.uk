@@ -2890,8 +2890,11 @@ a.card--service:hover .card__link {
 }
 
 .approach-item {
-  display: flex;
-  gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-lg);
+  row-gap: var(--space-xs);
+  align-items: start;
   padding: var(--space-lg);
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
@@ -2899,10 +2902,9 @@ a.card--service:hover .card__link {
 }
 
 .approach-item__number {
-  flex-shrink: 0;
+  grid-row: 1 / span 2;
   width: 56px;
   height: 56px;
-  min-width: 56px;
   border-radius: var(--radius-full);
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
@@ -2916,14 +2918,17 @@ a.card--service:hover .card__link {
 }
 
 .approach-item h3 {
+  grid-column: 2;
   font-size: calc(var(--text-h3-desktop) * 0.8);
-  margin-bottom: var(--space-sm);
+  margin: 0;
 }
 
 .approach-item p {
+  grid-column: 2;
   font-size: var(--text-sm);
   color: var(--color-text-light);
   line-height: var(--line-height-relaxed);
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -3393,6 +3398,16 @@ a.card--service:hover .card__link {
 
 .page-header--image p {
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Pill-style label on image page-headers for legibility on busy backgrounds */
+.page-header--image .section-label {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--color-secondary-dark);
+  padding: 0.4em 0.9em;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
 /* Secondary meta line under subtitle (e.g. credentials strip on issue pages) */
@@ -3902,7 +3917,15 @@ a.card--service:hover .card__link {
   color: var(--color-text-light);
   line-height: var(--line-height-relaxed);
   font-size: var(--text-sm);
-  margin: 0;
+  margin: 0 0 var(--space-md);
+}
+
+.highlight-box__content p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-box__content .btn {
+  margin-top: var(--space-md);
 }
 
 /* Secondary colour variant */
