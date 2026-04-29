@@ -48,15 +48,17 @@
   overflow: hidden;
 }
 
-/* Lighter frost card on showcase hero */
+/* Stronger frost card for legibility over busy imagery */
 .hero--showcase-dark .hero__content {
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Hero text shadow for legibility on overlay */
 .hero__heading,
 .hero__text {
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
 /* Hero image clamp — never let it overflow viewport */
