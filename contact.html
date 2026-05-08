@@ -222,37 +222,53 @@
           <div class="card contact-form-card">
             <h2>Send a Message</h2>
             <p>Fill in the form below and I&#39;ll get back to you as soon as I can. If you&#39;re contacting me on behalf of a parent or family member, please feel free to outline your concerns in the message.</p>
-            <form class="form" action="https://editmy.site/api/form/7" method="POST">
-              <input type="text" name="_hp" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
-              <input type="hidden" name="_t" value="">
-              <div class="form__row">
-                <div class="form__group">
-                  <label for="name" class="form__label form__label--required">Full Name</label>
-                  <input type="text" id="name" name="name" class="form__input" placeholder="Your full name" required autocomplete="name">
-                </div>
-                <div class="form__group">
-                  <label for="email" class="form__label form__label--required">Email Address</label>
-                  <input type="email" id="email" name="email" class="form__input" placeholder="you@example.com" required autocomplete="email">
-                </div>
+            <form class="form" action="/api/form/7" method="POST" data-thank-you="Thank you for your message. We will be in touch soon.">
+              <div style="display:none"><input type="text" name="_hp" tabindex="-1" autocomplete="off"></div>
+              <div class="form__group">
+                <label for="full_name" class="form__label form__label--required">Full Name</label>
+                <input type="text" id="full_name" name="full_name" class="form__input" placeholder="Your full name" required autocomplete="name">
               </div>
               <div class="form__group">
-                <label for="phone" class="form__label">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form__input" placeholder="07xxx xxx xxx" autocomplete="tel">
-                <span class="form__hint">Optional — useful if you&#39;d prefer a call back</span>
+                <label for="email_address" class="form__label form__label--required">Email Address</label>
+                <input type="email" id="email_address" name="email_address" class="form__input" placeholder="you@example.com" required autocomplete="email">
               </div>
               <div class="form__group">
-                <label for="message" class="form__label form__label--required">Your Message</label>
-                <textarea id="message" name="message" class="form__textarea" placeholder="Tell me a little about what&#39;s going on — what you&#39;d like help with and any goals you have. If you&#39;re contacting me about a loved one, please feel free to outline your concerns." required></textarea>
+                <label for="phone_number" class="form__label">Phone Number</label>
+                <input type="tel" id="phone_number" name="phone_number" class="form__input" placeholder="07xxx xxx xxx" autocomplete="tel">
+              </div>
+              <div class="form__group">
+                <label for="your_message" class="form__label form__label--required">Your Message</label>
+                <textarea id="your_message" name="your_message" class="form__textarea" placeholder="Tell me a little about what&#039;s going on — what you&#039;d like help with and any goals you have. If you&#039;re contacting me about a loved one, please feel free to outline your concerns." required></textarea>
               </div>
               <div class="form__group form__group--checkbox">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">I agree for my details to be stored to receive a response to my enquiry, and agree to the <a href="privacy.html">privacy policy</a>.</label>
+                  <input type="checkbox" id="i_agree_for_my_details_to_be_stored_to_receive_a_response_to_my_enquiry_and_agree_to_the_privacy_policy" name="i_agree_for_my_details_to_be_stored_to_receive_a_response_to_my_enquiry_and_agree_to_the_privacy_policy" value="yes" required>
+                  <label for="i_agree_for_my_details_to_be_stored_to_receive_a_response_to_my_enquiry_and_agree_to_the_privacy_policy">I agree for my details to be stored to receive a response to my enquiry, and agree to the privacy policy.</label>
               </div>
               <div>
-                <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+                <button type="submit" class="btn btn--primary" style="width: 100%;">Send Message</button>
               </div>
-              <p class="form__consent-text">Your information is handled securely and never shared with third parties. See the <a href="privacy.html">privacy policy</a> for full details.</p>
             </form>
+            <script>
+            (function(){
+              var f=document.querySelector(".contact-form-wrap .form");
+              if(!f)return;
+              f.addEventListener("submit",function(e){
+                e.preventDefault();
+                var btn=f.querySelector("button[type=submit]");
+                btn.disabled=true;btn.textContent="Sending\u2026";
+                fetch(f.action,{method:"POST",body:new URLSearchParams(new FormData(f))})
+                .then(function(r){return r.json()})
+                .then(function(d){
+                  var msg=f.getAttribute("data-thank-you")||"Thank you for your message.";
+                  f.innerHTML='<div style="text-align:center;padding:var(--space-xl) 0"><p style="font-size:var(--text-lg);color:var(--color-primary);font-weight:600">'+msg+'</p></div>';
+                })
+                .catch(function(){
+                  btn.disabled=false;btn.textContent="Send Message";
+                  alert("Something went wrong. Please try again.");
+                });
+              });
+            })();
+            </script>
           </div>
         </div>
       </div>
