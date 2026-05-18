@@ -44,14 +44,10 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- SECTION: nav -->
-
-  <nav class="nav nav--two-tier" role="navigation" aria-label="Main navigation">
-
-    <div class="container">
-
-      <div class="nav__top">
-
-        <a href="index.html" class="nav__brand nav__brand--inline">
+<nav class="nav nav--two-tier" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__top">
+      <a href="index.html" class="nav__brand nav__brand--inline">
 
           <!-- PROFILE:logo --><img src="images/home-physiologo.png" alt="Home Physio Solihull" class="nav__logo"><!-- /PROFILE:logo -->
 
@@ -64,8 +60,7 @@
           </div>
 
         </a>
-
-        <div class="nav__contact">
+<div class="nav__contact">
 
           <div class="nav__contact-item">
 
@@ -84,120 +79,65 @@
           </div>
 
         </div>
-
-      </div>
-
-      <div class="nav__bottom">
-
-        <div class="nav__links">
-
-          <a href="index.html" class="nav__link">Home</a>
-
-          <a href="about.html" class="nav__link">About</a>
-
-          <div class="nav__dropdown">
-
-            <button class="nav__link nav__dropdown-trigger" aria-expanded="false">
-
-              Treatments
-
-              <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-
-            </button>
-
-            <div class="nav__dropdown-menu">
-
-              <a href="home-visit-physiotherapy.html" class="nav__link nav__link--child">Home Visit Physiotherapy</a>
-
-              <a href="injection-therapy.html" class="nav__link nav__link--child">Injection Therapy</a>
-
-              <a href="neurological-physiotherapy.html" class="nav__link nav__link--child">Neurological Physiotherapy</a>
-
-              <a href="acupuncture.html" class="nav__link nav__link--child">Acupuncture</a>
-
-              <a href="gait-analysis-orthotics.html" class="nav__link nav__link--child">Gait Analysis &amp; Orthotics</a>
-              <a href="elderly-rehabilitation.html" class="nav__link nav__link--child">Elderly Rehabilitation</a>
-
-            </div>
-
-          </div>
-
-          <a href="areas-covered.html" class="nav__link">Areas Covered</a>
-
-          <a href="fees.html" class="nav__link">Fees</a>
-
-          <a href="faq.html" class="nav__link">FAQ</a>
-
-          <a href="reviews.html" class="nav__link">Reviews</a>
-          <a href="gallery.html" class="nav__link">Gallery</a>
-
-          <a href="contact.html" class="nav__link">Contact</a>
-
-          <a href="contact.html" class="btn btn--primary nav__cta">Book a Home Visit</a>
-
+    </div>
+    <div class="nav__bottom">
+      <div class="nav__links">
+      <a href="./" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <div class="nav__dropdown">
+        <button class="nav__link nav__link--has-children nav__link--active" aria-expanded="false" aria-haspopup="true">Treatments <svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="home-visit-physiotherapy.html" class="nav__dropdown-link">Home Visit Physiotherapy</a>
+          <a href="injection-therapy.html" class="nav__dropdown-link">Injection Therapy</a>
+          <a href="neurological-physiotherapy.html" class="nav__dropdown-link">Neurological Physiotherapy</a>
+          <a href="acupuncture.html" class="nav__dropdown-link">Acupuncture</a>
+          <a href="gait-analysis-orthotics.html" class="nav__dropdown-link">Gait Analysis &amp; Orthotics</a>
+          <a href="elderly-rehabilitation.html" class="nav__dropdown-link nav__dropdown-link--active">Elderly Rehabilitation</a>
         </div>
-
-        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-
-          <span class="nav__toggle-bar"></span>
-
-          <span class="nav__toggle-bar"></span>
-
-          <span class="nav__toggle-bar"></span>
-
-        </button>
-
       </div>
-
+      <a href="areas-covered.html" class="nav__link">Areas Covered</a>
+      <a href="fees.html" class="nav__link">Fees</a>
+      <a href="faq.html" class="nav__link">FAQ</a>
+      <a href="reviews.html" class="nav__link">Reviews</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+      <a href="contact.html" class="btn btn--primary nav__cta">Book a Home Visit</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobile-menu" role="menu">
+    <a href="./" class="nav__link" role="menuitem">Home</a>
+    <a href="about.html" class="nav__link" role="menuitem">About</a>
+    <div class="nav__mobile-group">
+      <div class="nav__mobile-parent">
+        <a href="home-visit-physiotherapy.html" class="nav__link" role="menuitem">Treatments</a>
+        <button class="nav__mobile-expand" aria-label="Expand Treatments" aria-expanded="false"><svg class="nav__chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="nav__mobile-children" role="menu" hidden>
+        <a href="home-visit-physiotherapy.html" class="nav__link nav__link--child" role="menuitem">Home Visit Physiotherapy</a>
+        <a href="injection-therapy.html" class="nav__link nav__link--child" role="menuitem">Injection Therapy</a>
+        <a href="neurological-physiotherapy.html" class="nav__link nav__link--child" role="menuitem">Neurological Physiotherapy</a>
+        <a href="acupuncture.html" class="nav__link nav__link--child" role="menuitem">Acupuncture</a>
+        <a href="gait-analysis-orthotics.html" class="nav__link nav__link--child" role="menuitem">Gait Analysis &amp; Orthotics</a>
+        <a href="elderly-rehabilitation.html" class="nav__link nav__link--child nav__link--active" role="menuitem">Elderly Rehabilitation</a>
+      </div>
+    </div>
+    <a href="areas-covered.html" class="nav__link" role="menuitem">Areas Covered</a>
+    <a href="fees.html" class="nav__link" role="menuitem">Fees</a>
+    <a href="faq.html" class="nav__link" role="menuitem">FAQ</a>
+    <a href="reviews.html" class="nav__link" role="menuitem">Reviews</a>
+    <a href="gallery.html" class="nav__link" role="menuitem">Gallery</a>
+    <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+    <div class="nav__mobile-ctas">
+      <a href="contact.html" class="btn btn--primary" role="menuitem">Book a Home Visit</a>
     </div>
 
-    <div class="nav__mobile" id="mobile-menu" role="menu">
-
-      <a href="index.html" class="nav__link" role="menuitem">Home</a>
-
-      <a href="about.html" class="nav__link" role="menuitem">About</a>
-
-      <div class="nav__mobile-group">
-
-        <button class="nav__link nav__mobile-parent nav__mobile-expand" aria-expanded="false">
-
-          Treatments
-
-          <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-
-        </button>
-
-        <div class="nav__mobile-children" hidden>
-
-          <a href="home-visit-physiotherapy.html" class="nav__link nav__link--child" role="menuitem">Home Visit Physiotherapy</a>
-
-          <a href="injection-therapy.html" class="nav__link nav__link--child" role="menuitem">Injection Therapy</a>
-
-          <a href="neurological-physiotherapy.html" class="nav__link nav__link--child" role="menuitem">Neurological Physiotherapy</a>
-
-          <a href="acupuncture.html" class="nav__link nav__link--child" role="menuitem">Acupuncture</a>
-
-          <a href="gait-analysis-orthotics.html" class="nav__link nav__link--child" role="menuitem">Gait Analysis &amp; Orthotics</a>
-          <a href="elderly-rehabilitation.html" class="nav__link nav__link--child" role="menuitem">Elderly Rehabilitation</a>
-
-        </div>
-
-      </div>
-
-      <a href="areas-covered.html" class="nav__link" role="menuitem">Areas Covered</a>
-
-      <a href="fees.html" class="nav__link" role="menuitem">Fees</a>
-
-      <a href="faq.html" class="nav__link" role="menuitem">FAQ</a>
-
-      <a href="reviews.html" class="nav__link" role="menuitem">Reviews</a>
-      <a href="gallery.html" class="nav__link" role="menuitem">Gallery</a>
-
-      <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
-
-      <a href="contact.html" class="btn btn--primary" role="menuitem">Book a Home Visit</a>
-
-      <div class="nav__mobile-contact">
+    <div class="nav__mobile-contact">
 
         <div class="nav__contact-item">
 
@@ -206,22 +146,9 @@
           <a href="tel:07535230606">07535 230 606</a>
 
         </div>
-
-        <div class="nav__contact-item">
-
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-
-          <a href="mailto:contact@homephysiosolihull.co.uk">contact@homephysiosolihull.co.uk</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <!-- /SECTION: nav -->
+  </div>
+</nav>
+<!-- /SECTION: nav -->
 
   <div class="nav-scroll" aria-hidden="true">
     <div class="container nav-scroll__inner">
@@ -409,24 +336,15 @@
         <p class="footer__heading">Quick Links</p>
 
         <div class="footer__links">
-
-          <a href="index.html" class="footer__link">Home</a>
-
+          <a href="./" class="footer__link">Home</a>
           <a href="about.html" class="footer__link">About</a>
-
           <a href="home-visit-physiotherapy.html" class="footer__link">Treatments</a>
-
           <a href="areas-covered.html" class="footer__link">Areas Covered</a>
-
           <a href="fees.html" class="footer__link">Fees</a>
-
           <a href="faq.html" class="footer__link">FAQ</a>
-
           <a href="reviews.html" class="footer__link">Reviews</a>
           <a href="gallery.html" class="footer__link">Gallery</a>
-
           <a href="contact.html" class="footer__link">Contact</a>
-
         </div>
       </div>
       <div class="footer__col">
