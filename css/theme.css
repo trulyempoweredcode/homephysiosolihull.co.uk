@@ -100,3 +100,23 @@
 .nav__title {
   font-size: var(--text-sm);
 }
+
+/* Bare lists in page content sections get bullets restored.
+   Framework base.css has a global `ul, ol { list-style: none }` reset for
+   nav / footer / mobile-menu lists; bare <ul>/<ol> (no class) inside a
+   <section> are content lists and should look like content lists. */
+.section ul:not([class]),
+.section ol:not([class]) {
+  list-style: disc;
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+.section ol:not([class]) {
+  list-style: decimal;
+}
+.section ul:not([class]) li,
+.section ol:not([class]) li {
+  margin-bottom: var(--space-xs);
+  color: var(--color-text-light);
+  line-height: var(--line-height-relaxed);
+}
