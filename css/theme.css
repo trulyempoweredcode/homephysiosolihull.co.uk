@@ -212,3 +212,9 @@
 }
 
 /* === END BACKFILL === */
+
+/* Pricing card titles promoted to h2 for heading hierarchy (h1 -> h2) on fees.html; keep them at the h3 card size */
+.pricing-card h2 {
+  font-size: calc(var(--text-h3-desktop) * 0.8);
+  margin-bottom: var(--space-sm);
+}
