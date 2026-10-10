@@ -1,0 +1,22 @@
+# Every address this site has had. The weekly old-address guard (Ai-Editor scripts/address_guard.py)
+# checks each one still works and forwards it if not. Add lines freely; never remove one.
+# archive: pending
+/
+/about.html
+/acupuncture.html
+/areas-covered.html
+/contact.html
+/elderly-rehabilitation.html
+/faq.html
+/fees.html
+/gait-analysis-orthotics.html
+/gallery.html
+/home-visit-physiotherapy.html
+/injection-therapy.html
+/neurological-physiotherapy.html
+/physiotherapy-birmingham.html
+/physiotherapy-shirley.html
+/physiotherapy-solihull.html
+/reviews.html
+/cookies-policy.html
+/privacy.html
